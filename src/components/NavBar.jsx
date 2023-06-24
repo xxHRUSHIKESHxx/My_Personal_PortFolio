@@ -55,7 +55,7 @@ return(
                 <a href="https://www.instagram.com/hrushikesh_behera_/"><img src={navIcon3} alt="instagram" /></a>
                 </div>    
              <button className="vvd" onClick={()=> OpenMyCv()}>
-                <span>My Resume</span>
+                <span>My Resume</span>   
                
                 </button>       
          </span>

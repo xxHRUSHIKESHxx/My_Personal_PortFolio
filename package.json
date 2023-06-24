@@ -26,6 +26,10 @@
     "TagCloud": "^2.3.2",
     "web-vitals": "^2.1.4"
   },
+  "engines": {
+    "npm": "8.15.0",
+    "node" : "v18.7.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
