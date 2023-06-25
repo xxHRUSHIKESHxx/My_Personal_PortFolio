@@ -8,6 +8,7 @@ require('dotenv').config();
 const PORT = process.env.PORT || 3001; // this will make sure our server willl run on port 3001 and if it is defined then it will run on environment variables other wise on port 3001
 
 const app = express(); // createing exoress server
+app.use(express.static(path.resolve(__dirname, '../build')));
 app.use(cors());//to avoid cors error
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
