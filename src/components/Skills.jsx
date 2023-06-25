@@ -34,7 +34,9 @@ const Skills = () => {
               <TrackVisibility >
               {({isVisible})=> 
 
-              <h2 className={isVisible? " animate__animated animate__bounce" : ""} >Skills</h2>
+              <div className={isVisible? " animate__animated animate__bounce" : ""} >
+                <h2 className="skills-heading">Skills</h2>
+                </div>
              
             }
 
