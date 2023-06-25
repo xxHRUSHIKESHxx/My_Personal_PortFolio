@@ -12,6 +12,8 @@ app.use(express.static(path.resolve(__dirname, '../build')));
 app.use(cors());//to avoid cors error
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+// Set the "trust proxy" to accept the host header from chatgpt
+app.set('trust proxy', true);
 
 app.get("/api", (req , res ) => {
     res.json({message:"hello from server!"})
