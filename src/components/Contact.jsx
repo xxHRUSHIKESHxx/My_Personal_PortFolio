@@ -36,7 +36,7 @@ const Contact = () => {
     e.preventDefault();
     setButtonText("Sending..."); //setting button text to ending to show the user some events occured
     //  making an api call to get the respone from what we have set up
-    let response = await fetch("http://localhost:3001/api/contact", {
+    let response = await fetch("/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
