@@ -4,8 +4,8 @@ import TagCloud from 'TagCloud';
 
 const Spehere = () => {
     useEffect(() => {
-        return () =>
-{
+     
+
     const container = ".tagcloud";
     const texts =[
         "HTML",
@@ -30,7 +30,7 @@ const Spehere = () => {
         keep:true
     };
     TagCloud(container , texts , options)
-};  
+  
   } , [])
   return (
     <div className='Sphere_placing'>
