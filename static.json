@@ -1,0 +1,25 @@
+{
+    "buildCommand": "npm run build",
+    "publish": {
+      "root": "build",
+      "cleanUrls": true,
+      "forceHttps": true,
+      "staticHeaders": {
+        "/": {
+          "Cache-Control": "public, max-age=31536000"
+        }
+      },
+      "rewrites": [
+        {
+          "source": "/**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": {
+        "/**": {
+          "Access-Control-Allow-Origin": "*"
+        }
+      }
+    }
+  }
+  
