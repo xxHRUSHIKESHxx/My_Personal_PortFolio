@@ -46,9 +46,11 @@ return(
       </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto align-items-center">
-          <Nav.Link href="#home" className ={activeLink === 'home' ? 'active navbar-link' :'navbar-link'}  onClick ={() => onUpdateActiveLink('home')}>HOME</Nav.Link>
-          <Nav.Link href="#skills" className ={activeLink === 'skills' ? 'active navbar-link' :'navbar-link'} onClick ={() => onUpdateActiveLink('skills')}>SKILLS</Nav.Link>
-          <Nav.Link href="#project"  className ={activeLink === 'project' ? 'active navbar-link' :'navbar-link'} onClick ={() => onUpdateActiveLink('project')}>PROJECTS</Nav.Link>
+          <Nav.Link href="#home" className ={activeLink === 'home' ? 'active navbar-link' :'navbar-link'}  onClick ={() => onUpdateActiveLink('home')}>
+            <span className='navtext'>HOME</span>
+          </Nav.Link>
+          <Nav.Link href="#skills" className ={activeLink === 'skills' ? 'active navbar-link' :'navbar-link'} onClick ={() => onUpdateActiveLink('skills')}> <span className='navtext'>SKILLS</span></Nav.Link>
+          <Nav.Link href="#project"  className ={activeLink === 'project' ? 'active navbar-link' :'navbar-link'} onClick ={() => onUpdateActiveLink('project')}> <span className='navtext'>PROJECTS</span></Nav.Link>
          </Nav>
          <span className="navbar-text">
                <div className="social-icon">
