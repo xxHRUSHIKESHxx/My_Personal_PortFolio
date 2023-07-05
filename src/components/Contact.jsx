@@ -65,15 +65,27 @@ const Contact = () => {
             <img src={contactImg} alt="contact us" />
           </Col>
          <Col className="contact_container">
+          
+          <div className="contact_form">
           <TrackVisibility>
          
-          {({isVisible})=>
-            <div className={ isVisible ?"animate__animated animate__heartBeat" : ""}> 
-          <div className="contact_form">
-     
+         {({isVisible})=>
+           <div className={ isVisible ?"animate__animated animate__rubberBand" : ""}> 
             
           <h2 className="contactHeading">Get In Touch</h2>
+          </div>
+          }
+          
+          </TrackVisibility>
+          <TrackVisibility>
+         
+         {({isVisible})=>
+           <div className={ isVisible ?"animate__animated animate__zoomIn" : ""}> 
             <h5>Please Drop A Message If You Like To Recruit Me Or Talk About Some Random Stuffs Related To Development </h5>
+            </div>
+          }
+          
+          </TrackVisibility>
             <form onSubmit={handleSubmit}>
 
               <Row>
@@ -139,10 +151,8 @@ const Contact = () => {
               </Row>
             </form>
           
+   
           </div>
-          </div>}
-          
-            </TrackVisibility>
             </Col>
         </Row>
       </Container>
