@@ -68,7 +68,7 @@ const Contact = () => {
           <TrackVisibility>
          
           {({isVisible})=>
-            <div className={ isVisible ?"animate__animated animate__bounceIn" : ""}> 
+            <div className={ isVisible ?"animate__animated animate__heartBeat" : ""}> 
           <div className="contact_form">
      
             

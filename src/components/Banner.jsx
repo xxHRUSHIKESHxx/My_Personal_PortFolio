@@ -69,8 +69,10 @@ return (
         {/* allign items center is a react boot strap class name which will automatically add the styling to your component */}
         <Row >
             {/* applying colum to have the lines in column styling and for samll devices react app will atumatically convert the stylign to column mode */}
-          <Col xs={12} md={6} xl={7}>
-          
+    
+    
+       <Col xs={12} md={6} xl={7}>
+          <div>
           <TrackVisibility>
           {({isVisible})=>
              <span className="tagline"> 
@@ -79,28 +81,31 @@ return (
 
            }
           </TrackVisibility>
-            <TrackVisibility>
+           <TrackVisibility>
             {({isVisible})=>
                <div className={ isVisible ?"animate__animated animate__zoomIn" : "" }> 
                {/* so in this div tab if the component is visible then we apply the animation otherwise dont apply any animated*/ }
              <h1>
-              {` Hi I'm HRUSHIKESH , `} 
-              <br />
+              {`Hi I'm HRUSHIKESH,`} 
+              
+              <br/>
+
               <span className="wrap">{text}</span>
-            </h1>
+              </h1>
             <p>
              Just starting my carreer as a fornt-end developer.
              Some skills are acquired and some are on the process.using new skills and bringing my ideas in to life ...
              <br />
-             <h4 className="wrap">Thats My Nindo , My Ninja Way</h4> 
+             {/* <h4 className="wrap">Thats My Nindo , My Ninja Way</h4>  */}
             </p>
-            <button onClick={()=> console.log('connect')}> <span> let's connect <ArrowRightCircle size={25}/> </span>
+            <button onClick={()=> console.log('connect')} > <span> let's connect <ArrowRightCircle size={25}/> </span>
              </button>
             </div>}
              </TrackVisibility>
+             </div>
           </Col>
-            <Col  >
-               <Spehere/>
+            <Col >
+            <Spehere/>
            </Col>
         </Row>
       </Container>

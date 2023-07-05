@@ -41,24 +41,17 @@ const Skills = () => {
             }
 
               </TrackVisibility>
+              <div className="skill_about">
               <TrackVisibility>
               {({isVisible})=>  
-            <h5 className={isVisible? " animate__animated animate__zoomInDown" : ""}>
+              <h5 className={isVisible? " animate__animated animate__zoomInDown" : ""}>
               These Are The Skills That I Have Accquired In The Mean Time Of Building My Projects And During My Learnings.
              </h5>}
               </TrackVisibility>
-             
+              </div>
               {/* creating the slide show carousel */}
-              <Carousel  responsive = {responsive} infinite={true} className="skill-slider">
-              <TrackVisibility>
-              {({isVisible}) => isVisible&& 
-               <div className=  "item" >
-                <Circle percentage={60} countSpeed={30}/>
-                  <h5>Web Development</h5>
-                </div>   }
-                </TrackVisibility>
-
-              <TrackVisibility>
+         <Carousel  responsive = {responsive} infinite={true} className="skill-slider">
+            <TrackVisibility>
               {({isVisible}) => isVisible && 
               <div className="item">
               <Circle percentage={65} countSpeed={26}/>
@@ -82,6 +75,15 @@ const Skills = () => {
                </div> }
               </TrackVisibility>
               
+              <div className=  "item" >
+              <TrackVisibility>
+              {({isVisible}) => isVisible&& 
+                 <Circle percentage={60} countSpeed={30}/>
+                 }
+                  </TrackVisibility>
+                  <h2>Web Development</h2>
+                </div>
+
                 <TrackVisibility>
               {({isVisible}) => isVisible &&
                <div className="item">

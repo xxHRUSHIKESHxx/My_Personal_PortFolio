@@ -4,8 +4,8 @@ import TagCloud from 'TagCloud';
 
 const Spehere = () => {
     useEffect(() => {
-     
-
+ 
+    
     const container = ".tagcloud";
     const texts =[
         "HTML",
@@ -25,8 +25,8 @@ const Spehere = () => {
 
     const options ={
         radius: 300,
-        maxSpeed:"normal",
-        initSpeed:"normal",
+        maxSpeed:"fast",
+        initSpeed:"fast",
         keep:true
     };
     TagCloud(container , texts , options)
@@ -34,11 +34,11 @@ const Spehere = () => {
   } , [])
   return (
     <div className='Sphere_placing'>
-    <div className="text-sphere">
+    <div className="text_sphere">
         {/* span tag className must be tagcloud */}
         <span className="tagcloud"></span>
     </div>
-    </div>
+  </div>
   )
 }
 

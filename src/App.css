@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6{
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,14 +75,28 @@ h1, h2, h3, h4, h5, h6{
 }
 
 @keyframes App-logo-spin {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  50%{
+    transform: rotate(180deg)
+  }
+  100% {
     transform: rotate(360deg);
   }
 }
 
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+@media (min-width:1700px) {
+	main .container {
+		/* max-width: 100%; */
+    width: 100%;
+ 
+		padding: 0 0px;
+	}
+}
 
 p.success{
   color: #0ef;
@@ -98,7 +112,7 @@ p.danger{
 nav.navbar{
   padding: 0px 0;
   position: fixed;/*we want a fixed navigation bar */
-  width: 100%;
+  width: 100vw;
   top: -30px;/*padding top 0*/
   z-index: 9999;
   transition: 0.32s ease-in-out;
@@ -109,16 +123,15 @@ nav.navbar.scrolled{
   background-color: #121212;
 }
 nav.navbar a.navbar-brand{
-   width: 20%;
+   width: 30%;
   height: 10%;
-  margin-right: 90px; 
-  border-right: 90px;  
-  /* padding: 0px 18px; */
+ 
 }
 nav.navbar a.navbar-brand img{
   height: 200px;
-  margin-right:50px;
-  
+
+
+  animation: App-logo-spin infinite 5s linear;
 }
 
 /* unless the link is hoverd sthis styling would be applied */
@@ -164,12 +177,12 @@ span.navbar-text{
   width: 42px;
   height: 42px;
   position: absolute;
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(158,0,255,1) 100%);
-  border: 1px solid #fff;
+  background: #0ef;
+  border: 1px solid rgb(0, 159, 252);
   border-radius: 50%;
   transform: scale(0);
   transition: 0.3s ease-in-out;
-  box-shadow: 0 0 20px   rgba(158,0,255,1);
+  box-shadow: 0 0 20px   #0ef;
  
 }
 /* when it will be hovered it will look a little bit bigger than it is */
@@ -184,7 +197,7 @@ span.navbar-text{
 }
 
 .social-icon a:hover img{
-  filter: brightness(100) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(100%) contrast(86%);
+  filter: brightness(100) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(0%) contrast(86%);
  
 }
 /* lets connect button */
@@ -198,11 +211,12 @@ span.navbar-text{
  position: relative;
  background-color: transparent;
  transition : 0.3s ease-in-out;
- border-radius: 20px;
+ border-radius: 8px;
 }
 /* home skills projects */
 .navbar-text button span{
   z-index: 1;
+  position: relative;
 }
 /* before hovering on navbar */
 .navbar-text button::before{
@@ -210,9 +224,9 @@ span.navbar-text{
   width: 0%;
   height: 100%;
   position: absolute;
-  background:   linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(158,0,255,1) 100%);
-  box-shadow: 0 0 20px  rgba(158,0,255,1);
-  border-radius: 20px;
+  background:  #0ef;
+  box-shadow: 0 0 15px #0ef;
+  border-radius: 8px;
   left: 0;
   top: 0;
   z-index: -1;
@@ -220,83 +234,74 @@ span.navbar-text{
 }
 /* after hoving on navbar texts home sikks and projects */
 .navbar-text button:hover{
- color: #fff;
-
+ color: #121212;
+ border: 1px solid rgb(0, 159, 252);
+ border-radius: 8px;
 }
 .navbar-text button:hover::before{
   content:"";
   width: 100%;
-  height: 100%;
-  position: absolute;
-}
 
+}
 nav.navbar .navbar-toggler:active,
-nav.navbar .navbar-toggler:focus{
-  outline: none;
-  box-shadow:none;
+nav.navbar .navbar-toggler:focus {
+	outline: none;
+    box-shadow: none;
 }
-/* toggler icon when menu is minimized */
-nav.navbar .navbar-toggler-icon{
-    width: 24px;
-    height: 17px;
-    background-image: none;
-    position: relative;
-    border-bottom: 2px solid #fff;
-    transition: all 300ms linear;
-    top: -2px;
-}
-
-nav.navbar .navbar-toggler-icon:focus{
+nav.navbar .navbar-toggler-icon {
+  width: 24px;
+  height: 17px;
+  background-image: none;
+  position: relative;
   border-bottom: 2px solid #fff;
-}
-
-nav.navbar .navbar-toggler-icon:after,
-nav.navbar .navbar-toggler-icon:before{
-  width:24px;
-  position:absolute;
-  height: 2px;
-  background-color: #fff;
-  top: 0;
-  left: 0;
-  content: '';
-  z-index: 2;
   transition: all 300ms linear;
+  top: -2px;
 }
-nav.navbar .navbar-togglr-icon:after{
-  top: 8px;
+nav.navbar .navbar-toggler-icon:focus {
+	border-bottom: 2px solid #fff;
+}
+nav.navbar .navbar-toggler-icon:after,
+nav.navbar .navbar-toggler-icon:before {
+	width: 24px;
+	position: absolute;
+	height: 2px;
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	content: '';
+	z-index: 2;
+	transition: all 300ms linear;
+}
+nav.navbar .navbar-toggler-icon:after {
+	top: 8px;
+}
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+	transform: rotate(45deg);
+	background-color: #fff;
+	height: 2px;
+}
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+	transform: translateY(8px) rotate(-45deg);
+	background-color: #fff;
+	height: 2px;
+}
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+	border-color: transparent;
 }
 
-/* if navbar get expanded then rotate the toggler icon 45 degree  clock wise*/
-
-nav.navbar .navbar-toggler[aria-expanded= "true"] .navbar-toggler-icon:after{
-transform:rotate(45deg);
-background-color: #fff;
-height: 2px;
-}
-/* if navbar get expanded then rotate the toggler icon -45 degree anti clock wise*/
-nav.navbar .navbar-toggler[aria-expanded= "true"] .navbar-toggler-icon:before{
-  transform: translateY(8px) rotate(-45deg);
-  background-color: #fff;
-  height: 2px;
-}
-
-nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon{
-  border-color: transparent;
-}
 
 /*=========Banner - css ============== */
 .banner {
   margin-top:0;
-  padding: 145px 0 100px 0;
+  padding: 145px 0 100px ;
   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(36,2,80,1) 100%);
-
-  background-position: top center;
+  /* overflow: scroll;  */
+  /* word-wrap: break-word; */
+  /* background-position: top center; */
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* .myCanvas{
-  z-index: -4;
-} */
+
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -312,12 +317,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon{
 .banner h1 {
   font-size:65px;
   font-weight: 700;
-  letter-spacing: 0.8px;
+  /* letter-spacing: 0.8px; */
   line-height: 1;
   margin-bottom: 20px;
   display: block;
   color: #fff;
+  width: 100%;
 }
+
 
 .banner p{
   color: #dddcdc;
@@ -362,20 +369,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon{
 }
 
  /* sphere css */
- .text-sphere{
+ .text_sphere{
   position: relative;
   top: -119px;
-  left: 50px;
+  /* left: 50px; */
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: transparent;
+  background-size: cover;
+
  }
+
  .tagcloud{
   display: contents;
- 
   font-family: 'inter', sans-serif;
   font-weight: 600;
   letter-spacing: 0.0625em;
@@ -384,10 +393,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon{
  .tagcloud--item{
   color: #0ef;
   text-transform: uppercase;
+ 
  }
  .tagcloud--item:hover{
   color: #0ef;
-  text-shadow: 0px 0px 5px #0ef;
+  text-shadow: 0px 0px 20px #0ef;
  }
 
 
@@ -400,6 +410,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon{
 .skills{
   padding: 0 0 50px 0;
   position: relative;
+ /* overflow: hidden; */
 
 }
 
@@ -411,18 +422,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon{
 }
 
 .skill-bx{
-   /* background: #0f0045; */
+  
    background: rgb(80,16,77);
-background: linear-gradient(90deg, rgba(80,16,77,1) 0%, rgba(19,15,89,1) 100%);
+   background: linear-gradient(90deg, rgba(80,16,77,1) 0%, rgba(19,15,89,1) 100%);
    border-radius: 64px;
    text-align: center;
    padding: 60px 50px;
    margin-top:-60px;
    box-shadow: 0 0 30px #0ef;
-}
-.skill h2{
+   max-width: 100%;
 
+  
 }
+
+
+
+
+
 .skill p{
   color: #b8b8b8;
   font-size: 18px;
@@ -439,18 +455,7 @@ background: linear-gradient(90deg, rgba(80,16,77,1) 0%, rgba(19,15,89,1) 100%);
 .skill-slider h5{
   padding-top:  5px;
 }
-/* .skill-slider .item img{
-  width: 50%;
-  margin: 0 auto 15px auto;
-} */
-  /* gradiet circle styling */
-/* .background-image-left{
-  top:28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
- 
-} */
+
 /* =============Circle-skills========== */
 
 #number{
@@ -541,10 +546,9 @@ svg{
 .project .nav.nav-pills {
   width: 72%;
   margin: 0 auto;
-  border: 2px solid #fff;
+  /* border: 2px solid #fff; */
   border-radius: 50px;
   background-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(158,0,255,1) 100%);
-   /* rgb(255 255 255 / 10%); */
   overflow: hidden;
 }
 .project .nav.nav-pills .nav-item {
@@ -571,14 +575,11 @@ svg{
   position: absolute;
   width: 0;
   height: 100%;
- /* background-color:  #802201  ; */
- background:  linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(158,0,255,1) 100%) ; 
- /* background-image: linear-gradient(326deg, #802201 0%, #210d10 74%); */
+  background:  linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(158,0,255,1) 100%) ; 
   top: 0;
   left: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
-  /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); */
 }
 .project .nav.nav-pills .nav-link.active::before {
   width: 100% !important;
@@ -680,7 +681,7 @@ svg{
   animation: updown 3s linear infinite;
 
 }
-.contact h2 {
+ .contact h2{
 	font-size: 45px;
 	font-weight: 700;
   margin-bottom: 30px;
@@ -736,9 +737,7 @@ svg{
 }
 .contact form button::before {
   content: "";
- 
   background:  linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(158,0,255,1) 100%);
-
   box-shadow: 0 0 20px   rgba(158,0,255,1);
   width: 0;
   height: 100%;
@@ -784,6 +783,7 @@ svg{
 
 .footerLOGO{
    height: 100%;
+   animation: App-logo-spin infinite 5s linear;
 }
 
 .footer img{
@@ -797,3 +797,45 @@ svg{
   letter-spacing: 0.5px ;
   margin-top: 20px;
 }
+@media(min-width:768px){
+  nav.navbar a.navbar-brand{
+  margin-left: -125px;
+}
+}
+@media(max-width : 650px){
+  .text_sphere{
+    top: 0;
+    overflow: hidden;
+  }
+  .banner h1 {
+    font-size: 35px;
+  }
+  .skill-bx{
+    border-radius: 29px;
+  }
+  .FooterAlignment{
+    width: 100vw;
+  
+  }
+  .footerLOGO{
+   width: 100vw;
+   /* width: 100vw; */
+   margin-left: 32px;
+  }
+  .xFooter{
+    width: 100vw;
+    margin-left: 32px;
+  }
+  .project p{
+    font-size:14px;
+  }
+  .contact h5{
+    font-size: 14px;
+    margin: -20px 0 20px;
+
+  }
+  .skill_about h5{
+    font-size: 14px;
+  }
+ 
+ }

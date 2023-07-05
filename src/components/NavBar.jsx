@@ -35,12 +35,14 @@ return(
     <Navbar  expand="lg" className = {scrolled ? "scrolled" : ""}>
     <Container >
       <Navbar.Brand href="#home" >
-        <div sm = {6}>
+        <div  >
         <img src={logo} alt="logo"/>
         </div>
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" >
-        <span className="navbar-toggler-icon"></span>
+      <Navbar.Toggle aria-controls="basic-navbar-nav"  >
+
+        <span className="navbar-toggler-icon" ></span>
+       
       </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto align-items-center">
@@ -56,8 +58,7 @@ return(
                 </div>    
              <button className="vvd" onClick={()=> OpenMyCv()}>
                 <span>My Resume</span>   
-               
-                </button>       
+               </button>       
          </span>
       </Navbar.Collapse>
     </Container>
