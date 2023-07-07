@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState , useEffect} from "react";
+import {useState , useEffect , useRef } from "react";
 import { Navbar, Container , Nav} from "react-bootstrap";
 import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
@@ -9,7 +9,8 @@ import navIcon3 from '../assets/img/nav-icon3.svg';
 const NavBar = () => {
   const [activeLink ,setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
-
+  const [isActive, setIsActive] = useState(false);
+  const buttonRef = useRef();
   useEffect(()=>{
     const onScroll =()=>
 {
@@ -30,9 +31,23 @@ const  onUpdateActiveLink =(value) => {
 
 const OpenMyCv = () =>{
   window.open("https://docs.google.com/document/d/1TWhuFHODULFE-JCGhAxXuMwPaK--n6wywfHA-485Fn4/edit#heading=h.5rf9wr4r3no2" , "_blank")
+
 }
+
+const handleClick = () => {
+  setIsActive(!isActive);
+};
+const handleClick2 = () => {
+  // Revert handleClick by updating the state
+  buttonRef.current.click()
+};
+const MobileClick = (activeLink) => {
+  onUpdateActiveLink(activeLink);
+  handleClick2();
+}
+
 return(
-    <Navbar  expand="lg" className = {scrolled ? "scrolled" : ""}>
+    <Navbar  expand="lg" className = {isActive ?"ToggleNavBar" : ""}>
     <Container >
       <Navbar.Brand href="#home" >
         <div  >
@@ -41,16 +56,16 @@ return(
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav"  >
 
-        <span className="navbar-toggler-icon" ></span>
+        <span className="navbar-toggler-icon" onClick={() => handleClick()} ref={buttonRef} ></span>
        
       </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto align-items-center">
-          <Nav.Link href="#home" className ={activeLink === 'home' ? 'active navbar-link' :'navbar-link'}  onClick ={() => onUpdateActiveLink('home')}>
+          <Nav.Link href="#home" className ={activeLink === 'home' ? 'active navbar-link' :'navbar-link'}  onClick ={() => MobileClick()}>
             <span className='navtext'>HOME</span>
           </Nav.Link>
-          <Nav.Link href="#skills" className ={activeLink === 'skills' ? 'active navbar-link' :'navbar-link'} onClick ={() => onUpdateActiveLink('skills')}> <span className='navtext'>SKILLS</span></Nav.Link>
-          <Nav.Link href="#project"  className ={activeLink === 'project' ? 'active navbar-link' :'navbar-link'} onClick ={() => onUpdateActiveLink('project')}> <span className='navtext'>PROJECTS</span></Nav.Link>
+          <Nav.Link href="#skills" className ={activeLink === 'skills' ? 'active navbar-link' :'navbar-link'} onClick ={() => MobileClick()}> <span className='navtext'>SKILLS</span></Nav.Link>
+          <Nav.Link href="#project"  className ={activeLink === 'project' ? 'active navbar-link' :'navbar-link'} onClick ={() => MobileClick()}> <span className='navtext'>PROJECTS</span></Nav.Link>
          </Nav>
          <span className="navbar-text">
                <div className="social-icon">

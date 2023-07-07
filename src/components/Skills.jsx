@@ -35,7 +35,7 @@ const Skills = () => {
               {({isVisible})=> 
 
               <div className={isVisible? " animate__animated animate__bounce" : ""} >
-                <h2 className="skills-heading">Skills</h2>
+                <h2 className="skills-heading">SKILLS</h2>
                 </div>
              
             }

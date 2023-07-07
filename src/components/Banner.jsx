@@ -10,9 +10,6 @@ import Spehere from "./Spehere";
 
 
 
-
-
-
 const Banner = () => {
     // this looop will be initiated from 0 and go to the word which we are currently dislaying
     const [ loopNum , setLoopNum ] = useState(0); //use State will be start from the first word
@@ -62,6 +59,7 @@ const tick =() => {
   }
 }
 
+
 return (
     <section className="banner" id="home">
    
@@ -98,7 +96,7 @@ return (
              <br />
              {/* <h4 className="wrap">Thats My Nindo , My Ninja Way</h4>  */}
             </p>
-            <button onClick={()=> console.log('connect')} > <span> let's connect <ArrowRightCircle size={25}/> </span>
+            <button > <a href="#connect"> let's connect <ArrowRightCircle size={25}/>  </a>
              </button>
             </div>}
              </TrackVisibility>

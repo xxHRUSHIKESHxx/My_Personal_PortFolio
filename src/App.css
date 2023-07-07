@@ -118,10 +118,7 @@ nav.navbar{
   transition: 0.32s ease-in-out;
 
 }
-nav.navbar.scrolled{
-  padding: 0px 0;
-  background-color: #121212;
-}
+
 nav.navbar a.navbar-brand{
    width: 30%;
   height: 10%;
@@ -243,11 +240,9 @@ span.navbar-text{
   width: 100%;
 
 }
-.navtext{
-  color: #0ef;
-  text-shadow: 0 0 8px #0ef;
-  font-size: 18px;
-}
+.ToggleNavBar{
+  background-color: rgba(15, 0, 0, 0.864);
+ }
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
 	outline: none;
@@ -721,7 +716,7 @@ svg{
 .contact form button {
   font-weight: 700;
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.447);
+  background-color:  rgba(255, 255, 255, 0.1);
   padding: 14px 48px;
   font-size: 18px;
   margin-top: 25px;
@@ -859,5 +854,15 @@ svg{
     border: 1px solid rgb(0, 159, 252);
     box-shadow: 0 0 20px #0ef;
   }
+  .navtext{
+    color: #0ef;
+    text-shadow: 0 0 8px #0ef;
+    font-size: 18px;
+  }
+  
+nav.navbar{
+  position: absolute;
+}
+ 
  }
  
