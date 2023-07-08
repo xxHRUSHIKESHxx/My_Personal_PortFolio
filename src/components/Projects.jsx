@@ -56,7 +56,7 @@ const Projects = () => {
           <TrackVisibility>
         {({isVisible})=>
             <div className={ isVisible ?"animate__animated animate__bounce" : ""}> 
-            <h2>Projects</h2>
+            <h2>PROJECTS</h2>
             </div>
 
         }

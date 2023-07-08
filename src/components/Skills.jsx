@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useState}from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import TrackVisibility from "react-on-screen";
@@ -25,6 +25,7 @@ const Skills = () => {
     },
   };
 
+
   return (
     <section className="skills" id="skills">
       <Container>
@@ -50,59 +51,51 @@ const Skills = () => {
               </TrackVisibility>
               </div>
               {/* creating the slide show carousel */}
-         <Carousel  responsive = {responsive} infinite={true} className="skill-slider">
-            <TrackVisibility>
-              {({isVisible}) => isVisible && 
+                 
+              <TrackVisibility >
+              {({isVisible}) => isVisible &&       
+         <Carousel  responsive = {responsive} infinite={true} className="skill-slider" >
+        
+        
               <div className="item">
               <Circle percentage={65} countSpeed={26}/>
-                <h5>React js</h5>
-              </div>}
-              </TrackVisibility>
+              <h5>React js</h5>
+              </div>
+              
                 
-                <TrackVisibility>
-              {({isVisible}) => isVisible && 
               <div className="item">
-                 <Circle percentage={70} countSpeed={20}/>
-                  <h5>Java</h5>
-                </div>}
-              </TrackVisibility>
-                
-                <TrackVisibility>
-              {({isVisible}) => isVisible &&
+                 <Circle percentage={70} countSpeed={23}/>
+                 <h5>Java</h5>
+                 </div>
+             
+         
                 <div className="item">
                 <Circle percentage={40} countSpeed={40}/>
-                 <h5>Node.Js</h5>
-               </div> }
-              </TrackVisibility>
+                <h5>Node.Js</h5>
+               </div> 
               
+        
               <div className=  "item" >
-              <TrackVisibility>
-              {({isVisible}) => isVisible&& 
-                 <Circle percentage={60} countSpeed={30}/>
-                 }
-                  </TrackVisibility>
-                  <h2>Web Development</h2>
+              <Circle percentage={60} countSpeed={30}/>
+              <h5>Web Development</h5>
                 </div>
-
-                <TrackVisibility>
-              {({isVisible}) => isVisible &&
+           
+                  
+         
                <div className="item">
                <Circle percentage={80} countSpeed={20}/>
-                <h5>MySql</h5>
-              </div> }
-              </TrackVisibility>
-               
-                <TrackVisibility>
-              {({isVisible}) => isVisible &&  <div className="item">
+               <h5>MySql</h5>
+                </div>
+              
+            <div className="item">
                  <Circle percentage={68} countSpeed={23}/>
-                  <h5>Data Strutures</h5>
-                </div>}
-              </TrackVisibility>
+                 <h5>Data Strutures</h5>
+                 </div>
                
-               
-                
-
-              </Carousel>
+              </Carousel>   }
+            
+            </TrackVisibility >
+            
             </div>
           </Col>
         </Row>

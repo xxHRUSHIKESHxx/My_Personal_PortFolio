@@ -21,9 +21,7 @@ const Circle = ({percentage , countSpeed}) => {
     }
  },[counter]);
 
- const componentToTrack = () =>{
 
- }
 
 //  const fillingArea = Math.round(472 - 472 *(percentage/100));
 const[fillingArea , setFillingArea] = useState(0);
@@ -49,13 +47,13 @@ const style = {
     <div className="inner">
      
        <span id='number'>
+       
         <h5> {counter}%</h5>
        </span>
     </div>
     </div>
     <div className="svgElement">
-    <TrackVisibility>
-        {({isVisible}) => isVisible &&    <svg  xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+    <svg  xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
          <defs>
             <linearGradient id="GradientColor">
                <stop offset="0%" stop-color="#29e8ff" />
@@ -64,11 +62,9 @@ const style = {
          </defs>
        
          <circle cx="80" cy="80" r="70" stroke-linecap="round" style={style} />
- </svg> }
-         </TrackVisibility>
+ </svg>   
  
  </div>
- {/* #01f1de #7605e7 */}
  
 
  </Container>
