@@ -126,7 +126,7 @@ nav.navbar a.navbar-brand{
 }
 nav.navbar a.navbar-brand img{
   height: 200px;
-
+  mix-blend-mode: difference;
 
   animation: App-logo-spin infinite 5s linear;
 }
@@ -240,9 +240,7 @@ span.navbar-text{
   width: 100%;
 
 }
-.ToggleNavBar{
-  background-color: rgba(15, 0, 0, 0.864);
- }
+
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
 	outline: none;
@@ -768,7 +766,7 @@ svg{
 
 .footer{
   padding: 0 0 50px 0;
-
+ 
   background: rgb(78,30,76);
   background: linear-gradient(90deg, rgba(78,30,76,1) 0%, rgba(29,26,78,1) 100%);
  
@@ -863,6 +861,8 @@ svg{
 nav.navbar{
   position: absolute;
 }
- 
+.ToggleNavBar{
+  background-color: rgba(15, 0, 0, 0.864);
+ }
  }
  
