@@ -94,6 +94,14 @@ nav.navbar a.navbar-brand img{
 
   animation: App-logo-spin infinite 5s linear;
 }
+@keyframes App-logo-spin{
+  0%{
+   transform:  rotate(0deg);
+  }
+  100%{
+     transform: rotate(360deg);
+  }
+}
 
 /* unless the link is hoverd sthis styling would be applied */
 nav.navbar .navbar-nav .nav-link.navbar-link{
