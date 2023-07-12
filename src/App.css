@@ -92,9 +92,9 @@ nav.navbar a.navbar-brand img{
   height: 200px;
   mix-blend-mode: difference;
 
-  animation: App-logo-spin infinite 5s linear;
+  animation: logo-spin infinite 5s linear;
 }
-@keyframes App-logo-spin{
+@keyframes logo-spin{
   0%{
    transform:  rotate(0deg);
   }
@@ -578,6 +578,7 @@ svg{
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
+  background-color: #fff;
 }
 .proj-imgbx::before {
   content: "";
@@ -753,7 +754,7 @@ svg{
 
 .footerLOGO{
    height: 100%;
-   animation: App-logo-spin infinite 5s linear;
+   
 }
 
 .footer img{

@@ -2,9 +2,9 @@ import React from "react";
 import { Nav, Container, Row, Col, Tab } from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
 
-import proImg1 from "../assets/img/project-img1.png";
-import proImg2 from "../assets/img/project-img2.png";
-import proImg3 from "../assets/img/project-img3.png";
+import proImg1 from "../assets/img/project-img1.svg";
+import proImg2 from "../assets/img/project-img2.svg";
+import proImg3 from "../assets/img/project-img3.svg";
 import TrackVisibility from "react-on-screen";
 import "animate.css";
 
@@ -12,14 +12,14 @@ const Projects = () => {
   // here we will create an image which will hold our title descrition and image for the project
   const projects = [
     {
-      title: "bussiness start up",
-      description: "Design and  Development",
+      title: "Yearly Expenses",
+      description: "Add And See Expenses",
       imgUrl: proImg1,
-      url : "./blank.html"
+      url : "https://expensesmanager.onrender.com/"
     },
     {
-      title: "bussiness start up",
-      description: "Design and  Development",
+      title: "Youtube Clone",
+      description: "See Vedios, Search Content, Channel Details",
       imgUrl: proImg2,
       url : "./blank.html"
     },
