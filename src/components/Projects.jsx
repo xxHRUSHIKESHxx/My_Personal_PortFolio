@@ -15,7 +15,7 @@ const Projects = () => {
       title: "Yearly Expenses",
       description: "Add And See Expenses",
       imgUrl: proImg1,
-      url : "https://expensesmanager.onrender.com/"
+      url : "https://yearly-expenses.vercel.app/"
     },
     {
       title: "Youtube Clone",
@@ -32,13 +32,13 @@ const Projects = () => {
     {
       title: "bussiness start up",
       description: "Design and  Development",
-      imgUrl: proImg1,
+      imgUrl: proImg3,
       url : "./blank.html"
     },
     {
       title: "bussiness start up",
       description: "Design and  Development",
-      imgUrl: proImg2,
+      imgUrl: proImg3,
       url : "./blank.html"
     },
     {
