@@ -21,7 +21,7 @@ const Projects = () => {
       title: "Youtube Clone",
       description: "See Vedios, Search Content, Channel Details",
       imgUrl: proImg2,
-      url : "./blank.html"
+      url : "https://cloned-tube.vercel.app/"
     },
     {
       title: "bussiness start up",
