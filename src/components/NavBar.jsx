@@ -30,7 +30,7 @@ const  onUpdateActiveLink =(value) => {
 }
 
 const OpenMyCv = () =>{
-  window.open("https://docs.google.com/document/d/1TWhuFHODULFE-JCGhAxXuMwPaK--n6wywfHA-485Fn4/edit#heading=h.5rf9wr4r3no2" , "_blank")
+  window.open("https://docs.google.com/document/d/e/2PACX-1vT_v89ESu97hC2pHU2bY27O_h-7tXyNOpdLIon8WkiRXS6Qm0MHUKD_JjXbXxCMl2wwCuhpGncn9WhX/pub" , "_blank")
 
 }
 
