@@ -10,6 +10,7 @@ import Spehere from "./Spehere";
 
 
 
+
 const Banner = () => {
     // this looop will be initiated from 0 and go to the word which we are currently dislaying
     const [ loopNum , setLoopNum ] = useState(0); //use State will be start from the first word
@@ -107,8 +108,11 @@ return (
            </Col>
         </Row>
       </Container>
+      
     </section>
+
   );
+ 
 };
 
 

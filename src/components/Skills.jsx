@@ -54,7 +54,7 @@ const Skills = () => {
                  
               <TrackVisibility >
               {({isVisible}) => isVisible &&       
-         <Carousel  responsive = {responsive} infinite={true} className="skill-slider" >
+            <Carousel  responsive = {responsive} infinite={true} className="skill-slider" >
         
         
               <div className="item">

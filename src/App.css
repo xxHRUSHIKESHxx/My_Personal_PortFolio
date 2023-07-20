@@ -146,12 +146,14 @@ span.navbar-text{
   width: 42px;
   height: 42px;
   position: absolute;
-  background: #0ef;
-  border: 1px solid rgb(0, 159, 252);
+ 
+  border: 1px solid #fff;
   border-radius: 50%;
   transform: scale(0);
   transition: 0.3s ease-in-out;
-  box-shadow: 0 0 20px   #0ef;
+  background:  linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(158,0,255,1) 100%);
+  box-shadow: 0 0 20px   rgba(158,0,255,1);
+ 
  
 }
 /* when it will be hovered it will look a little bit bigger than it is */
@@ -166,7 +168,7 @@ span.navbar-text{
 }
 
 .social-icon a:hover img{
-  filter: brightness(100) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(0%) contrast(86%);
+  filter: brightness(100) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(100%) contrast(86%);
  
 }
 /* lets connect button */
@@ -193,8 +195,8 @@ span.navbar-text{
   width: 0%;
   height: 100%;
   position: absolute;
-  background:  #0ef;
-  box-shadow: 0 0 15px #0ef;
+  background:  linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(158,0,255,1) 100%);
+  box-shadow: 0 0 20px   rgba(158,0,255,1);
   border-radius: 8px;
   left: 0;
   top: 0;
@@ -203,8 +205,8 @@ span.navbar-text{
 }
 /* after hoving on navbar texts home sikks and projects */
 .navbar-text button:hover{
- color: #121212;
- border: 1px solid rgb(0, 159, 252);
+ color: #fff;
+ border: 1px solid #fff;
  border-radius: 8px;
 }
 .navbar-text button:hover::before{
@@ -380,6 +382,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skills{
   padding: 0 0 50px 0;
   position: relative;
+  background:#121212;
  /* overflow: hidden; */
 
 }
