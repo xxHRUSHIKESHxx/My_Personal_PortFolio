@@ -136,7 +136,7 @@ const Contact = () => {
                   onChange={(e) => onFormUpdate("message", e.target.value)}
                 ></textarea>
 
-                <button type="submit">
+                <button type="submit" >
                   {" "}
                   <span>{buttonText}</span>
                 </button>
