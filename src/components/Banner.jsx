@@ -62,9 +62,11 @@ const tick =() => {
 
 
 return (
+  
     <section className="banner" id="home">
-   
+
       <Container >
+     
         {/* allign items center is a react boot strap class name which will automatically add the styling to your component */}
         <Row >
             {/* applying colum to have the lines in column styling and for samll devices react app will atumatically convert the stylign to column mode */}
@@ -107,9 +109,11 @@ return (
             <Spehere/>
            </Col>
         </Row>
+        
       </Container>
-      
+    
     </section>
+  
 
   );
  

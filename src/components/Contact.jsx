@@ -49,7 +49,11 @@ const Contact = () => {
     setFormDetails(formInitialDetails); //setting from details to initial state
     if (result.code === 200) {
       setStatus({ success: true, message: "Message sent successfully" });
-    } else {
+      setTimeout(() => {
+        setStatus({ success: false, message: "" });
+      }, 3000);
+   }
+    else {
       setStatus({
         success: false,
         message: "Somthing went wrong ,please try again later.",

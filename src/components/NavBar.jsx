@@ -48,6 +48,7 @@ const MobileClick = (activeLink) => {
 
 return(
     <Navbar  expand="lg" className = {isActive ?"ToggleNavBar" : ""}>
+   
     <Container >
       <Navbar.Brand href="#home" >
         <div  >
@@ -78,7 +79,9 @@ return(
                </button>       
          </span>
       </Navbar.Collapse>
+    
     </Container>
+    
   </Navbar>
 )
     
