@@ -19,7 +19,10 @@ const Spehere = () => {
         "ES6",
         "GIT",
         "MySql",
-        "NodeJS"
+        "NODEJS",
+        "SAAS",
+        "MONGODB",
+        "MONGOOSE"
 
     ];
 
@@ -27,6 +30,7 @@ const Spehere = () => {
         radius: 300,
         maxSpeed:"fast",
         initSpeed:"fast",
+       
         keep:true
     };
     TagCloud(container , texts , options)
