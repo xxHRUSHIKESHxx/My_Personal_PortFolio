@@ -50,6 +50,7 @@ const Projects = () => {
     },
   ];
   return (
+   
     <section className="project" id="project">
       <Container>
         <Row>
@@ -112,6 +113,7 @@ const Projects = () => {
       </Container>
      
     </section>
+
   );
 };
 

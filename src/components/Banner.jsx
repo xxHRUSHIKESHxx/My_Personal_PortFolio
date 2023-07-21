@@ -105,7 +105,7 @@ return (
              </TrackVisibility>
              </div>
           </Col>
-            <Col >
+            <Col className="animate__animated animate__backInRight" >
             <Spehere/>
            </Col>
         </Row>
